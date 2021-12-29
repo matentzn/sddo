@@ -1,0 +1,11 @@
+Ontology ID	Label	Logical Type	Parent	Equiv Class
+ID	LABEL	TYPE	SC %	EC %
+http://www.w3.org/ns/sosa/Observation		class	OBI:0000011	
+http://www.w3.org/ns/sosa/FeatureOfInterest		class	BFO:0000040	
+http://www.w3.org/ns/sosa/ObservableProperty		class	http://purl.obolibrary.org/obo/BFO_0000019	
+http://www.w3.org/ns/sosa/Platform		class	BFO:0000040	
+http://www.w3.org/ns/sosa/Procedure		class	OBI:0000011	
+http://www.w3.org/ns/sosa/Sample		class		OBI:0100051
+http://www.w3.org/ns/sosa/Sampler		class	http://purl.obolibrary.org/obo/OBI_0000968	
+http://www.w3.org/ns/sosa/Sampling		class	http://www.w3.org/ns/sosa/Procedure	
+http://www.w3.org/ns/sosa/Sensor		class	BFO:0000040	

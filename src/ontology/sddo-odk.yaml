@@ -1,0 +1,36 @@
+title: Science Data Discovery Ontology
+id: sddo
+github_org: NASA-IMPACT
+repo: sddo
+allow_equivalents: all
+description: The Science Data Discovery Ontology (sddo) is being developed to provide a semantic foundation for the discovery of information managed by NASA's Science Mission Directorate.  This information spans many scientific disciplines, fields and subfields, including heliophysics, earth science, planetary science, astrophysics, biology, astrobiology, and physical science. 
+license: http://creativecommons.org/licenses/by/3.0/
+dosdp_tools_options: --obo-prefixes=true
+edit_format: owl
+exclude_tautologies: structural
+export_formats:
+- owl
+- obo
+import_group:
+  products:
+  - id: bfo
+  - id: obi
+obo_format_options: ''
+primary_release: full
+reasoner: ELK
+release_artefacts:
+- full
+- base
+robot_java_args: '-Xmx8G'
+robot_report:
+  custom_profile: false
+  fail_on: null
+  report_on:
+  - edit
+  - .owl
+  use_labels: true
+uribase: http://purl.obolibrary.org/obo
+use_dosdps: false
+components:
+  products:
+    - filename: all_templates.owl

@@ -3,7 +3,6 @@ http://www.w3.org/ns/sosa/FeatureOfInterest
 http://www.w3.org/ns/sosa/ObservableProperty
 http://www.w3.org/ns/sosa/Platform
 http://www.w3.org/ns/sosa/Procedure
-http://www.w3.org/ns/sosa/Result
 http://www.w3.org/ns/sosa/Sample
 http://www.w3.org/ns/sosa/Sampler
 http://www.w3.org/ns/sosa/Sampling

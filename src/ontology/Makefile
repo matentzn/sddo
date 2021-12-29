@@ -85,7 +85,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS = obi
+IMPORTS = bfo obi
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -266,10 +266,19 @@ mirror/obi.owl: mirror/obi.trigger
 
 ## ONTOLOGY: sosa
 ## Copy of sosa is re-downloaded whenever source changes
-mirror/sosa.trigger: $(SRC)
+#mirror/sosa.trigger: $(SRC)
 
-mirror/sosa.owl: mirror/sosa.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://www.w3.org/ns/sosa/ -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+#mirror/sosa.owl: mirror/sosa.trigger
+#	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://www.w3.org/ns/sosa/ -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+#.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: bfo
+## Copy of bfo is re-downloaded whenever source changes
+mirror/bfo.trigger: $(SRC)
+
+mirror/bfo.owl: mirror/bfo.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/obi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 

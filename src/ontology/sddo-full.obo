@@ -1,10 +1,10 @@
 format-version: 1.2
-data-version: sddo/releases/2021-12-21/sddo-full.owl
+data-version: sddo/releases/2021-12-29/sddo-full.owl
 ontology: sddo/sddo-full
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Science Data Discovery Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2021-12-21" xsd:string
+property_value: owl:versionInfo "2021-12-29" xsd:string
 
 [Term]
 id: APOLLO_SV:00000008
@@ -131,29 +131,10 @@ property_value: IAO:0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (pr
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
-id: BFO:0000016
-name: disposition
-is_a: BFO:0000017 ! realizable entity
-disjoint_from: BFO:0000023 ! role
-property_value: BFO:0000179 "disposition" xsd:string
-property_value: BFO:0000180 "Disposition" xsd:string
-property_value: IAO:0000112 "an atom of element X has the disposition to decay to an atom of element Y" xsd:string
-property_value: IAO:0000112 "certain people have a predisposition to colon cancer" xsd:string
-property_value: IAO:0000112 "children are innately disposed to categorize objects in certain ways." xsd:string
-property_value: IAO:0000112 "the cell wall is disposed to filter chemicals in endocytosis and exocytosis" xsd:string
-property_value: IAO:0000116 "BFO 2 Reference: Dispositions exist along a strength continuum. Weaker forms of disposition are realized in only a fraction of triggering cases. These forms occur in a significant number of cases of a similar type." xsd:string
-property_value: IAO:0000600 "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
-property_value: IAO:0000601 "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
-property_value: IAO:0000602 "(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
-property_value: IAO:0000602 "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Term]
 id: BFO:0000017
 name: realizable entity
 def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
 is_a: BFO:0000020 ! specifically dependent continuant
-disjoint_from: BFO:0000019 ! quality
 property_value: BFO:0000179 "realizable" xsd:string
 property_value: BFO:0000180 "RealizableEntity" xsd:string
 property_value: IAO:0000112 "the disposition of this piece of metal to conduct electricity." xsd:string
@@ -165,26 +146,6 @@ property_value: IAO:0000600 "To say that b is a realizable entity is to say that
 property_value: IAO:0000601 "All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/060-002"}
 property_value: IAO:0000602 "(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/060-002"}
 property_value: IAO:0000602 "(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/058-002"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Term]
-id: BFO:0000019
-name: quality
-is_a: BFO:0000020 ! specifically dependent continuant
-property_value: BFO:0000179 "quality" xsd:string
-property_value: BFO:0000180 "Quality" xsd:string
-property_value: IAO:0000111 "quality" xsd:string
-property_value: IAO:0000112 "the ambient temperature of this portion of air" xsd:string
-property_value: IAO:0000112 "the color of a tomato" xsd:string
-property_value: IAO:0000112 "the length of the circumference of your waist" xsd:string
-property_value: IAO:0000112 "the mass of this piece of gold." xsd:string
-property_value: IAO:0000112 "the shape of your nose" xsd:string
-property_value: IAO:0000112 "the shape of your nostril" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-property_value: IAO:0000600 "a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/055-001"}
-property_value: IAO:0000601 "If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/105-001"}
-property_value: IAO:0000602 "(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/105-001"}
-property_value: IAO:0000602 "(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/055-001"}
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
@@ -249,20 +210,6 @@ property_value: IAO:0000602 "(iff (GenericallyDependentContinuant a) (and (Conti
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
-id: BFO:0000034
-name: function
-is_a: BFO:0000016 ! disposition
-property_value: BFO:0000179 "function" xsd:string
-property_value: BFO:0000180 "Function" xsd:string
-property_value: IAO:0000112 "the function of a hammer to drive in nails" xsd:string
-property_value: IAO:0000112 "the function of a heart pacemaker to regulate the beating of a heart through electricity" xsd:string
-property_value: IAO:0000112 "the function of amylase in saliva to break down starch into sugar" xsd:string
-property_value: IAO:0000116 "BFO 2 Reference: In the past, we have distinguished two varieties of function, artifactual function and biological function. These are not asserted subtypes of BFO:function however, since the same function – for example: to pump, to transport – can exist both in artifacts and in biological entities. The asserted subtypes of function that would be needed in order to yield a separate monoheirarchy are not artifactual function, biological function, etc., but rather transporting function, pumping function, etc." xsd:string
-property_value: IAO:0000600 "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
-property_value: IAO:0000602 "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Term]
 id: BFO:0000040
 name: material entity
 def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
@@ -293,23 +240,6 @@ property_value: IAO:0000602 "(forall (x) (if (and (Entity x) (exists (y t) (and 
 property_value: IAO:0000602 "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/020-002"}
 property_value: IAO:0000602 "(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/019-002"}
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Term]
-id: BFO:0000182
-name: history
-is_a: BFO:0000015 ! process
-property_value: BFO:0000179 "history" xsd:string
-property_value: BFO:0000180 "History" xsd:string
-property_value: IAO:0000600 "A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/138-001"}
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Term]
-id: CHEBI:33250
-name: atom
-def: "A chemical entity constituting the smallest component of an element having the chemical properties of the element." []
-is_a: BFO:0000040 ! material entity
-property_value: IAO:0000111 "atom" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
 
 [Term]
 id: IAO:0000003
@@ -379,22 +309,6 @@ property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
 property_value: IAO:0000119 "GROUP: OBI" xsd:string
 
 [Term]
-id: IAO:0000015
-name: information carrier
-def: "A quality of an information bearer that imparts the information content" []
-is_a: BFO:0000019 ! quality
-intersection_of: BFO:0000019 ! quality
-intersection_of: RO:0000059 IAO:0000030 ! concretizes information content entity
-relationship: RO:0000059 IAO:0000030 ! concretizes information content entity
-property_value: IAO:0000111 "information carrier" xsd:string
-property_value: IAO:0000112 "In the case of a printed paperback novel the physicality of the ink and of the paper form part of the information bearer. The qualities of appearing black and having a certain pattern for the ink and appearing white for the paper form part of the information carrier in this case." xsd:string
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "12/15/09: There is a concern that some ways that carry information may be processes rather than qualities, such as in a 'delayed wave carrier'." xsd:string
-property_value: IAO:0000116 "2014-03-10: We are not certain that all information carriers are qualities. There was a discussion of dropping it." xsd:string
-property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
-property_value: IAO:0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy" xsd:string
-
-[Term]
 id: IAO:0000027
 name: data item
 def: "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
@@ -425,19 +339,6 @@ property_value: IAO:0000116 "2014-03-10: The use of \"thing\" is intended to be 
 property_value: IAO:0000116 "information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).\n\nPrevious. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity." xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
 property_value: IAO:0000119 "OBI_0000142" xsd:string
-
-[Term]
-id: IAO:0000032
-name: scalar measurement datum
-def: "A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label." []
-is_a: IAO:0000109 ! measurement datum
-relationship: OBI:0001938 OBI:0001931 ! has value specification scalar value specification
-property_value: IAO:0000112 "10 feet. 3 ml." xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000116 "2009-03-16: we decided to keep datum singular in scalar measurement datum, as in\nthis case we explicitly refer to the singular form" xsd:string
-property_value: IAO:0000116 "Would write this as: has_part some 'measurement unit label' and has_part some numeral and has_part exactly 2, except for the fact that this won't let us take advantage of OWL reasoning over the numbers. Instead use has measurment value property to represent the same. Use has measurement unit label (subproperty of has_part) so we can easily say that there is only one of them." xsd:string
-property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
-property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
 
 [Term]
 id: IAO:0000033
@@ -585,20 +486,6 @@ property_value: IAO:0000119 "OBI Plan and Planned Process branch" xsd:string
 property_value: IAO:0000119 "OBI_0000344" xsd:string
 
 [Term]
-id: IAO:0000109
-name: measurement datum
-def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
-is_a: IAO:0000027 ! data item
-relationship: OBI:0001938 OBI:0001933 ! has value specification value specification
-property_value: IAO:0000111 "measurement datum" xsd:string
-property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:string
-property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
-property_value: IAO:0000119 group:OBI xsd:string
-property_value: IAO:0000119 "OBI_0000305" xsd:string
-
-[Term]
 id: IAO:0000178
 name: material information bearer
 def: "A material entity in which a concretization of an information content entity inheres." []
@@ -701,16 +588,6 @@ property_value: IAO:0000111 "document" xsd:string
 property_value: IAO:0000112 "A journal article, patent application, laboratory notebook, or a book" xsd:string
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
-
-[Term]
-id: IAO:0000408
-name: length measurement datum
-def: "A scalar measurement datum that is the result of measurement of length quality" []
-is_a: IAO:0000032 ! scalar measurement datum
-relationship: IAO:0000039 UO:0000001 ! has measurement unit label length unit
-relationship: IAO:0000221 PATO:0000122 ! is quality measurement of length
-property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
 
 [Term]
 id: IAO:0000409
@@ -952,44 +829,6 @@ property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
 property_value: IAO:0000117 "PERSON: Philippe Rocca-Serra" xsd:string
 property_value: IAO:0000117 "PERSON: Susanna Sansone" xsd:string
 property_value: IAO:0000119 "GROUP: OBI" xsd:string
-
-[Term]
-id: OBI:0000272
-name: protocol
-def: "A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process." []
-is_a: IAO:0000104 ! plan specification
-property_value: IAO:0000111 "protocol" xsd:string
-property_value: IAO:0000112 "PCR protocol, has objective specification, amplify DNA fragment of interest, and has action specification describes the amounts of experimental reagents used (e..g. buffers, dNTPS, enzyme), and the temperature and cycle time settings for running the PCR." xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
-property_value: IAO:0000119 "OBI branch derived + wikipedia (http://en.wikipedia.org/wiki/Protocol_%28natural_sciences%29)" xsd:string
-property_value: OBI:0001847 "study protocol" xsd:string
-
-[Term]
-id: OBI:0000338
-name: drawing a conclusion based on data
-def: "A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion" []
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000027 ! has_specified_input data item
-relationship: OBI:0000299 OBI:0001909 ! has_specified_output conclusion based on data
-property_value: IAO:0000111 "interpreting data" xsd:string
-property_value: IAO:0000112 "Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that 'defects in gene XYZ cause cancer due to improper DNA repair' based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. " xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
-property_value: IAO:0000117 "PERSON: Jennifer Fostel" xsd:string
-property_value: IAO:0000119 "Bjoern Peters" xsd:string
-
-[Term]
-id: OBI:0000374
-name: excitation function
-def: "A excitation function is a function  to inject energy by bombarding a material with energetic particles (e.g., photons) thereby imbuing internal material components such as electrons with additional energy.  These internal, 'excited' particles may lead to the rupturing of covalent chemical bonds or may quickly relax back to there unexcited state with an exponential time course thereby locally emitting energy in the form of photons." []
-is_a: BFO:0000034 ! function
-property_value: IAO:0000111 "excitation function" xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "Bill Bug" xsd:string
-property_value: IAO:0000117 "Daniel Schober" xsd:string
-property_value: IAO:0000117 "Frank Gibson" xsd:string
-property_value: IAO:0000117 "Melanie Courtot" xsd:string
 
 [Term]
 id: OBI:0000450
@@ -1241,6 +1080,7 @@ id: OBI:0000953
 name: processed specimen
 def: "A specimen that has been intentionally physically modified." []
 comment: A tissue sample that has been sliced and stained for a histology study.
+is_a: http://www.w3.org/ns/sosa/Sample ! Sample
 is_a: OBI:0000047 ! processed material
 is_a: OBI:0100051 ! specimen
 intersection_of: OBI:0000047 ! processed material
@@ -1263,30 +1103,6 @@ property_value: IAO:0000117 "Bjoern Peters" xsd:string
 property_value: IAO:0000119 "Bjoern Peters" xsd:string
 
 [Term]
-id: OBI:0000968
-name: device
-def: "A material entity that is designed to perform a function in a scientific investigation, but is not a reagent." []
-is_a: OBI:0000047 ! processed material
-relationship: RO:0000085 BFO:0000034 ! has function function
-property_value: IAO:0000111 "device" xsd:string
-property_value: IAO:0000112 "A voltmeter is a measurement device which is intended to perform some measure function." xsd:string
-property_value: IAO:0000112 "An autoclave is a device that sterlizes instruments or contaminated waste by applying high temperature and pressure." xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000116 "2012-12-17 JAO: In common lab usage, there is a distinction made between devices and reagents that is difficult to model. Therefore we have chosen to specifically exclude reagents from the definition of \"device\", and are enumerating the types of roles that a reagent can perform.\n\n2013-6-5 MHB: The following clarifications are outcomes of the May 2013 Philly Workshop. Reagents are distinguished from devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in some chemical interaction or reaction during the realization of their experimental role. By contrast, devices do not participate in such chemical reactions/interactions.  Note that there are cases where devices use reagent components during their operation, where the reagent-device distinction is less clear.  For example:\n\n(1) An HPLC machine is considered a device, but has a column that holds a stationary phase resin as an operational component.  This resin qualifies as a device if it participates purely in size exclusion, but bears a reagent role that is realized in the running of a column if it interacts electrostatically or chemically with the evaluant. The container the resin is in (“the column”) considered alone is a device. So the entire column as well as the entire HPLC machine are devices that have a reagent as an operating part.\n\n(2) A pH meter is a device, but its electrode component bears a reagent role in virtue of its interacting directly with the evaluant in execution of an assay.\n\n(3) A gel running  box  is a device that has a metallic lead as a component that participates in a chemical reaction with the running buffer when a charge is passed through it.  This metallic lead is considered to have a reagent role as a component of this device realized in the running of a gel.\n\nIn the examples above, a reagent is an operational component of a device, but the device itself does not realize a reagent role (as bearing a reagent role is not transitive across the part_of relation).  In this way, the asserted disjointness between a reagent and device holds, as both roles are never realized in the same bearer during execution of an assay.  " xsd:string
-property_value: IAO:0000117 "PERSON: Helen Parkinson" xsd:string
-property_value: IAO:0000118 "instrument" xsd:string
-property_value: IAO:0000119 "OBI development call 2012-12-17." xsd:string
-
-[Term]
-id: OBI:0000984
-name: dose
-def: "A measurement datum that measures the quantity of something that may be administered to an organism or that an organism may be exposed to. Quantities of nutrients, drugs, vaccines and toxins are referred to as doses." []
-is_a: IAO:0000109 ! measurement datum
-property_value: IAO:0000111 "dose" xsd:string
-property_value: IAO:0000112 "An organism has been injected 1ml of vaccine" xsd:string
-property_value: IAO:0000114 IAO:0000123
-
-[Term]
 id: OBI:0001000
 name: questionnaire
 def: "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study." []
@@ -1299,46 +1115,11 @@ property_value: IAO:0000117 "PERSON: Jessica Turner" xsd:string
 property_value: IAO:0000119 "Merriam-Webster" xsd:string
 
 [Term]
-id: OBI:0001138
-name: X-ray source
-def: "A device that is used to generate X-rays." []
-is_a: OBI:0000968 ! device
-relationship: RO:0000085 OBI:0000374 ! has function excitation function
-property_value: IAO:0000111 "X-ray source" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "PERSON: Erik Segerdell" xsd:string
-property_value: IAO:0000118 "x-ray generator" xsd:string
-property_value: IAO:0000119 http://en.wikipedia.org/wiki/X-ray_generator xsd:string
-
-[Term]
-id: OBI:0001909
-name: conclusion based on data
-def: "An information content entity that is inferred from data." []
-is_a: IAO:0000030 ! information content entity
-relationship: OBI:0000124 IAO:0000027 ! is_supported_by_data data item
-relationship: OBI:0000312 OBI:0000338 ! is_specified_output_of drawing a conclusion based on data
-property_value: IAO:0000111 "conclusion based on data" xsd:string
-property_value: IAO:0000112 "The conclusion that a gene is upregulated in a tissue sample based on the band intensity in a western blot. The conclusion that a patient has a infection based on measurement of an elevated body temperature and reported headache. The conclusion that there were problems in an investigation because data from PCR and microarray are conflicting.\nThe following are NOT conclusions based on data: data themselves; results from pure mathematics, e.g. \"13 is prime\"." xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000116 "In the Philly 2013 workshop, we recognized the limitations of \"conclusion textual entity\", and we introduced this as more general. The need for the 'textual entity' term going forward is up for future debate. " xsd:string
-property_value: IAO:0000117 "Group:2013 Philly Workshop group" xsd:string
-property_value: IAO:0000119 "Group:2013 Philly Workshop group" xsd:string
-
-[Term]
 id: OBI:0001930
 name: categorical value specification
 def: "A value specification that is specifies one category out of a fixed number of nominal categories" []
 is_a: OBI:0001933 ! value specification
 property_value: IAO:0000111 "categorical value specification" xsd:string
-property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
-
-[Term]
-id: OBI:0001931
-name: scalar value specification
-def: "A value specification that consists of two parts: a numeral and a unit label" []
-is_a: OBI:0001933 ! value specification
-property_value: IAO:0000111 "scalar value specification" xsd:string
 property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
 
@@ -1643,16 +1424,6 @@ property_value: IAO:0000119 "NCI BBRB, OBI" xsd:string
 property_value: IAO:0000234 "NCI BBRB" xsd:string
 
 [Term]
-id: OBI:0002983
-name: altitude measurement datum
-def: "A length measurement datum between a point at sea or ground level and some point above it." []
-is_a: IAO:0000408 ! length measurement datum
-property_value: IAO:0000111 "altitude measurement datum" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "Chris Stoeckert" xsd:string
-property_value: IAO:0000119 "Adapted from https://www.merriam-webster.com/dictionary/altitude" xsd:string
-
-[Term]
 id: OBI:0002989
 name: material supplier
 def: "A person or organization that provides material supplies to other people or organizations." []
@@ -1687,10 +1458,10 @@ property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/Organism" xsd:str
 id: OBI:0100051
 name: specimen
 def: "A material entity that has the specimen role." []
-is_a: BFO:0000040 ! material entity
+is_a: http://www.w3.org/ns/sosa/Sample ! Sample
 intersection_of: BFO:0000040 ! material entity
 intersection_of: RO:0000087 OBI:0000112 ! has role specimen role
-relationship: RO:0000087 OBI:0000112 ! has role specimen role
+equivalent_to: http://www.w3.org/ns/sosa/Sample ! Sample
 property_value: IAO:0000111 "specimen" xsd:string
 property_value: IAO:0000112 "Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen." xsd:string
 property_value: IAO:0000114 IAO:0000122
@@ -1915,400 +1686,244 @@ property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000117 "James Malone" xsd:string
 
 [Term]
-id: PATO:0000051
-name: morphology
-def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." []
-is_a: PATO:0001241 ! physical object quality
-property_value: IAO:0000111 "morphology" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Term]
-id: PATO:0000122
-name: length
-def: "A 1-D extent quality which is equal to the distance between two points." []
-is_a: PATO:0000051 ! morphology
-property_value: IAO:0000111 "length" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Term]
-id: PATO:0001018
-name: physical quality
-def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." []
-is_a: PATO:0001241 ! physical object quality
-property_value: IAO:0000111 "physical quality" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Term]
-id: PATO:0001241
-name: physical object quality
-def: "A quality which inheres in a continuant." []
-is_a: BFO:0000019 ! quality
-property_value: IAO:0000111 "physical object quality" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
-
-[Term]
 id: SDDO:0000001
-name: Assay
+name: assay
+def: "An assay is an investigative (analytic) procedure for qualitatively assessing or quantitatively measuring the presence, amount, or functional activity of a target entity." []
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Assay
 
 [Term]
 id: SDDO:0000002
-name: Event
-
-[Term]
-id: SDDO:0000004
-name: DataDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
+name: event
+def: "Something observable that happened at a given time and place" []
+property_value: IAO:0000119 "Adapted from http://purl.obolibrary.org/obo/NCIT_C25499" xsd:string
 
 [Term]
 id: SDDO:0000005
-name: Parameter
-
-[Term]
-id: SDDO:0000006
-name: Specimen
-is_a: SDDO:0000041 ! Feature
+name: data parameter
+def: "A data parameter is any characteristic that can help in understanding data content. That is, a parameter is a data element that is useful, or critical, when identifying  or describing the content of a data object." []
+property_value: IAO:0000112 "another test example" xsd:string
+property_value: IAO:0000112 "The meaning of a column within a spreadsheet (e.g., identifier or height); the meaning of each pixel in an image (e.g., surface temperature)" xsd:string
 
 [Term]
 id: SDDO:0000007
-name: MetadataProduct
-is_a: SDDO:0000085 ! InformationProduct
-
-[Term]
-id: SDDO:0000009
-name: Study
-
-[Term]
-id: SDDO:0000011
-name: OperationDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: metadata product
+is_a: SDDO:0000085 ! information product
+property_value: IAO:0000116 "While agreed that metadata is just data about data and so is really an unneeded term, we recognize that the term metadata is often applied to information about data no matter its form.  In many cases, a metadata product is available for access, even if the data is not.  Thus a Metadata Product Service is any information product or service that returns metadata about science data." xsd:string
 
 [Term]
 id: SDDO:0000012
-name: Platform
+name: platform
+def: "A platform is a physical object to which an instrument is attached or in which it is contained." []
+property_value: IAO:0000112 "A spacecraft, a person, a ship, a piece of laboratory equipment" xsd:string
 
 [Term]
 id: SDDO:0000013
-name: InformationProductService
-is_a: SDDO:0000059 ! ProductService
-property_value: definition "While agreed that the distinction between data and information is becoming increasingly fuzzy, for the purposes of this project information is defined to be any NASA science product or service that returns something other than science data." xsd:string
-
-[Term]
-id: SDDO:0000014
-name: ExperimentDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000015
-name: Increment
-
-[Term]
-id: SDDO:0000016
-name: InstrumentDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: information product or service
+is_a: SDDO:0000059 ! product service
 
 [Term]
 id: SDDO:0000017
-name: DataProduct
-is_a: SDDO:0000072 ! DataProductService
-
-[Term]
-id: SDDO:0000019
-name: ModelDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-property_value: definition "For the purposes of the SMD project, anything that you can obtain or use from any of the SMD divisions is a product or service." xsd:string
+name: data product
+is_a: SDDO:0000072 ! data product or service
 
 [Term]
 id: SDDO:0000020
-name: Instrument
-
-[Term]
-id: SDDO:0000023
-name: Software
+name: instrument
+def: "An instrument is a physical object that can be used to collect data." []
+property_value: IAO:0000112 "A camera, MODIS, a survey instrument (e.g., google form)" xsd:string
+property_value: IAO:0000119 "Adapted from pds:Instrument" xsd:string
 
 [Term]
 id: SDDO:0000025
-name: Person
+name: person
 
 [Term]
 id: SDDO:0000027
-name: Experiment
-
-[Term]
-id: SDDO:0000028
-name: PlatformDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000030
-name: InstrumentOperatingModeDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: experiment
+def: "A plan for a coordinated set of actions and observations designed to generate data, with the ultimate goal of discovery or hypothesis testing." []
+property_value: IAO:0000116 "Added the phrase \"plan for a\" to the front of the definition per Dan's request" xsd:string
+property_value: IAO:0000119 "adapted from http://purl.obolibrary.org/obo/NCIT_C42790" xsd:string
 
 [Term]
 id: SDDO:0000032
-name: LaboratoryProcedure
-
-[Term]
-id: SDDO:0000034
-name: InstrumentOperatingMode
-
-[Term]
-id: SDDO:0000035
-name: Measurement
+name: laboratory procedure
+def: "Any procedure that involves testing or manipulating a sample or subject in a laboratory setting" []
+property_value: IAO:0000119 "A broadened version of http://purl.obolibrary.org/obo/NCIT_C25294" xsd:string
 
 [Term]
 id: SDDO:0000038
-name: AccessInterface
+name: access interface
 
 [Term]
 id: SDDO:0000041
-name: Feature
-
-[Term]
-id: SDDO:0000044
-name: EngineeringPlatform
-is_a: SDDO:0000012 ! Platform
+name: feature
 
 [Term]
 id: SDDO:0000051
-name: Organization
-
-[Term]
-id: SDDO:0000052
-name: LivingSubject
+name: organization
 
 [Term]
 id: SDDO:0000056
-name: Deployment
+name: deployment
 
 [Term]
 id: SDDO:0000059
-name: ProductService
+name: product service
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-18T00:00:00 xsd:string
-property_value: http://purl.org/dc/elements/1.1/description "For the purposes of the SMD project, anything that you can obtain or use from any of the SMD divisions is a product or service" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Anything that you can obtain or use from any of NASA's SMD divisions is a product or service" xsd:string
 created_by: Peter Fox
 
 [Term]
 id: SDDO:0000061
-name: DiscoveryInterface
+name: discovery interface
 
 [Term]
 id: SDDO:0000062
-name: Mission
-
-[Term]
-id: SDDO:0000065
-name: Hurricane
-is_a: SDDO:0000041 ! Feature
-
-[Term]
-id: SDDO:0000068
-name: Factor
-
-[Term]
-id: SDDO:0000069
-name: SelectionParameter
-
-[Term]
-id: SDDO:0000070
-name: InformationSelectionParameter
-is_a: SDDO:0000069 ! SelectionParameter
+name: mission
+def: "A mission is a named activity for some purpose" []
+property_value: IAO:0000119 "Discussion by SDDO project team" xsd:string
 
 [Term]
 id: SDDO:0000071
-name: Program
+name: program
 
 [Term]
 id: SDDO:0000072
-name: DataProductService
-is_a: SDDO:0000059 ! ProductService
+name: data product or service
+is_a: SDDO:0000059 ! product service
+property_value: IAO:0000116 "It is generally agreed that data is in the eye of the beholder; but, for the purposes of this project the terms data and data product are limited to traditional mostly numeric science data products that NASA holds and actually calls data, data sets or data products. Thus a DataProductService is any product or service that returns bulk science data." xsd:string
 
 [Term]
 id: SDDO:0000074
-name: Observation
-
-[Term]
-id: SDDO:0000075
-name: HealthSafetyEquipment
-
-[Term]
-id: SDDO:0000076
-name: Hardware
-
-[Term]
-id: SDDO:0000081
-name: Sample
+name: observation
 
 [Term]
 id: SDDO:0000082
-name: Campaign
-
-[Term]
-id: SDDO:0000083
-name: ImageLandmark
-is_a: SDDO:0000041 ! Feature
+name: campaign
 
 [Term]
 id: SDDO:0000085
-name: InformationProduct
-is_a: SDDO:0000013 ! InformationProductService
-
-[Term]
-id: SDDO:0000086
-name: MissionDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: information product
+is_a: SDDO:0000013 ! information product or service
 
 [Term]
 id: SDDO:0000088
-name: ResearchInvestigation
-
-[Term]
-id: SDDO:0000089
-name: DataSelectionParameter
-is_a: SDDO:0000069 ! SelectionParameter
-
-[Term]
-id: SDDO:0000091
-name: ApplicationDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-
-[Term]
-id: SDDO:0000092
-name: DataProductDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000094
-name: Repository
-
-[Term]
-id: SDDO:0000096
-name: Organism
-is_a: SDDO:0000041 ! Feature
-
-[Term]
-id: SDDO:0000101
-name: IncidenceAngleRange
-
-[Term]
-id: SDDO:0000103
-name: Provider
-
-[Term]
-id: SDDO:0000105
-name: SpaceTimeBoundingDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000108
-name: SciencePlatform
-is_a: SDDO:0000012 ! Platform
-
-[Term]
-id: SDDO:0000109
-name: InformationDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-
-[Term]
-id: SDDO:0000111
-name: LocationDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: research investigation
 
 [Term]
 id: SDDO:0000118
-name: MutableNecessaryEvil
+name: mutable necessary evil
 
 [Term]
 id: SDDO:0000119
-name: ResearchMission
-is_a: SDDO:0000062 ! Mission
-
-[Term]
-id: SDDO:0000127
-name: SampleDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: research mission
+def: "A mission that gather scientific data" []
+is_a: SDDO:0000062 ! mission
 
 [Term]
 id: SDDO:0000129
-name: Project
+name: project
 
 [Term]
 id: SDDO:0000130
-name: EngineeringMission
-is_a: SDDO:0000062 ! Mission
+name: engineering mission
+is_a: SDDO:0000062 ! mission
 
 [Term]
 id: SDDO:0000134
-name: NASAMission
-is_a: SDDO:0000062 ! Mission
-
-[Term]
-id: SDDO:0000136
-name: IncidenceAngle
+name: NASA mission
+def: "A NASA mission is a mission led or funded by NASA" []
+is_a: SDDO:0000062 ! mission
+property_value: IAO:0000116 "Per the NASA SMD glossary at https://science.nasa.gov/glossary/ a mission is a \"NASA Science-funded activity with the purpose of meeting goals laid out by presidential directive, and detailed in Science Mission Directorate's strategic plan.\"  This would mean the ontology would need to include the concepts of a presidential directive and a strategic plan - wait for a use case before implementing this change." xsd:string
+property_value: IAO:0000119 "SDDO team" xsd:string
 
 [Term]
 id: SDDO:0000142
-name: Phenomenon
+name: phenomenon
 
 [Term]
 id: SDDO:0000147
-name: ResearchStudy
+name: research study
 
 [Term]
 id: SDDO:0100000
-name: ExperimentApparatus
+name: experiment apparatus
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:30:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
-id: SDDO:0100001
-name: DiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:32:52Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
-
-[Term]
-id: SDDO:0100002
-name: ToolDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:33:53Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
-
-[Term]
 id: SDDO:0100003
-name: Facility
+name: facility
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:36:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
 id: SDDO:0100005
-name: Author
+name: author
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:38:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
-id: SDDO:0100006
-name: Investigator
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:38:29Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000001
+name: investigator
+created_by: Rduerr
+creation_date: 2021-11-30T19:43:39.350414Z
 
 [Term]
-id: SDDO:0100007
-name: PhotoGallery
-is_a: SDDO:0000085 ! InformationProduct
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:39:19Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000002
+name: organism
+created_by: Rduerr
+creation_date: 2021-11-30T21:34:56.970241Z
 
 [Term]
-id: SDDO:0100008
-name: Document
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:39:33Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000003
+name: specimen
+created_by: Rduerr
+creation_date: 2021-11-30T21:35:20.533927Z
 
 [Term]
-id: SDDO:0100009
-name: ObjectDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:41:00Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000004
+name: study
+def: "A data product service in the GeneLab repository" []
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-01T20:52:05.98268Z
+
+[Term]
+id: SDDO:1000001
+name: spase:NumericalData
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:57:22.551595Z
+
+[Term]
+id: SDDO:1000002
+name: spase:Catalog
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:58:11.536811Z
+
+[Term]
+id: SDDO:1000003
+name: spase:DisplayData
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:58:56.536404Z
+
+[Term]
+id: SDDO:1000004
+name: pds:Data_Set_PDS3
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-10T20:53:48.676522Z
+
+[Term]
+id: SDDO:1000005
+name: pds:Collection
+def: "A PDS 4 collection where the collection_type is \"Data\"" []
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-10T20:55:07.211503Z
 
 [Term]
 id: UO:0000001
@@ -2384,11 +1999,100 @@ property_value: IAO:0000111 "rate unit" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
 
 [Term]
+id: http://www.w3.org/ns/sosa/FeatureOfInterest
+name: Feature Of Interest
+comment: The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.
+is_a: BFO:0000040 ! material entity
+property_value: definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling." xsd:string
+property_value: example "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
+id: http://www.w3.org/ns/sosa/ObservableProperty
+name: Observable Property
+comment: An observable quality (property, characteristic) of a FeatureOfInterest.
+is_a: BFO:0000019
+property_value: definition "An observable quality (property, characteristic) of a FeatureOfInterest." xsd:string
+property_value: example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
 id: http://www.w3.org/ns/sosa/Observation
 name: Observation
 comment: Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.
+is_a: OBI:0000011 ! planned process
 property_value: definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with." xsd:string
 property_value: example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
+id: http://www.w3.org/ns/sosa/Platform
+name: Platform
+comment: A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.
+is_a: BFO:0000040 ! material entity
+property_value: definition "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms." xsd:string
+property_value: example "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
+id: http://www.w3.org/ns/sosa/Procedure
+name: Procedure
+comment: A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.
+is_a: OBI:0000011 ! planned process
+property_value: definition "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results." xsd:string
+property_value: example "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+property_value: note "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)." xsd:string
+
+[Term]
+id: http://www.w3.org/ns/sosa/Sample
+name: Sample
+comment: A Sample is the result from an act of Sampling.
+comment: Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.
+comment: Physical samples are sometimes known as 'specimens'.
+comment: Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.\n\nA Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features.
+is_a: OBI:0100051 ! specimen
+property_value: definition "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made." xsd:string
+property_value: example "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc." xsd:string
+property_value: example "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+property_value: note "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly." xsd:string
+
+[Term]
+id: http://www.w3.org/ns/sosa/Sampler
+name: Sampler
+comment: A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.
+is_a: OBI:0000968
+property_value: definition "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples." xsd:string
+property_value: example "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
+id: http://www.w3.org/ns/sosa/Sampling
+name: Sampling
+comment: An act of Sampling carries out a sampling Procedure to create or transform one or more samples.
+is_a: http://www.w3.org/ns/sosa/Procedure ! Procedure
+property_value: definition "An act of Sampling carries out a sampling Procedure to create or transform one or more samples." xsd:string
+property_value: example "Crushing a rock sample in a ball mill." xsd:string
+property_value: example "Digging a pit through a soil sequence." xsd:string
+property_value: example "Dividing a field site into quadrants." xsd:string
+property_value: example "Drawing blood from a patient." xsd:string
+property_value: example "Drilling an observation well." xsd:string
+property_value: example "Establishing a station for environmental monitoring." xsd:string
+property_value: example "Registering an image of the landscape." xsd:string
+property_value: example "Selecting a subset of a population." xsd:string
+property_value: example "Sieving a powder to separate the subset finer than 100-mesh." xsd:string
+property_value: example "Splitting a piece of drill-core to create two new samples." xsd:string
+property_value: example "Taking a diamond-drill core from a rock outcrop." xsd:string
+property_value: isDefinedBy http://www.w3.org/ns/sosa/
+
+[Term]
+id: http://www.w3.org/ns/sosa/Sensor
+name: Sensor
+comment: Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.
+is_a: BFO:0000040 ! material entity
+property_value: definition "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms." xsd:string
+property_value: example "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes." xsd:string
 property_value: isDefinedBy http://www.w3.org/ns/sosa/
 
 [Typedef]
@@ -2453,13 +2157,6 @@ domain: BFO:0000015 ! process
 range: BFO:0000017 ! realizable entity
 
 [Typedef]
-id: IAO:0000039
-name: has measurement unit label
-range: IAO:0000003 ! measurement unit label
-is_functional: true
-is_a: BFO:0000051 ! has part
-
-[Typedef]
 id: IAO:0000136
 name: is about
 def: "A (currently) primitive relation that relates an information artifact to an entity." []
@@ -2469,42 +2166,6 @@ property_value: IAO:0000116 "7/6/2009 Alan Ruttenberg. Following discussion with
 property_value: IAO:0000117 "person:Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy" xsd:string
 domain: IAO:0000030 ! information content entity
-
-[Typedef]
-id: IAO:0000221
-name: is quality measurement of
-def: "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q" []
-property_value: IAO:0000116 "8/6/2009 Alan Ruttenberg: The strategy is to be rather specific with this relationship. There are other kinds of measurements that are not of qualities, such as those that measure time. We will add these as separate properties for the moment and see about generalizing later" xsd:string
-property_value: IAO:0000116 "From the second IAO workshop [Alan Ruttenberg 8/6/2009: not completely current, though bringing in comparison is probably important]\n\nThis one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.\n\nWerner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details.\n--\nFrom the second IAO workshop, various comments, [commented on by Alan Ruttenberg 8/6/2009]\n\nunit of measure is a quality, e.g. the length of a ruler.\n\n[We decided to hedge on what units of measure are, instead talking about measurement unit labels, which are the information content entities that are about whatever measurement units are. For IAO we need that information entity in any case. See the term measurement unit label]\n\n[Some struggling with the various subflavors of is_about. We subsequently removed the relation represents, and describes until and only when we have a better theory]\n\na represents b means either a denotes b or a describes\n\ndescribe:\na describes b means a is about b and a allows an inference of at least one quality of b\n\nWe have had a long discussion about denotes versus describes." xsd:string
-property_value: IAO:0000116 "From the second IAO workshop: An attempt at tieing the quality to the measurement datum more carefully.\n\na is a magnitude means a is a determinate quality particular inhering in some bearer b existing at a time t that can be represented/denoted by an information content entity e that has parts denoting a unit of measure, a number, and b. The unit of measure is an instance of the determinable quality." xsd:string
-property_value: IAO:0000116 "From the second meeting on IAO:\n\nAn attempt at defining assay using Barry's \"reliability\" wording\n\nassay:\nprocess and has_input some material entity\nand has_output some information content entity \nand which is such that instances of this process type reliably generate \noutputs that describes the input." xsd:string
-property_value: IAO:0000116 "This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.\n\nWerner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details." xsd:string
-property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
-domain: IAO:0000109 ! measurement datum
-range: BFO:0000019 ! quality
-is_a: IAO:0000136 ! is about
-inverse_of: IAO:0000417 ! is quality measured as
-
-[Typedef]
-id: IAO:0000417
-name: is quality measured as
-def: "inverse of the relation of is quality measurement of" []
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000116 "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship" xsd:string
-property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
-
-[Typedef]
-id: OBI:0000124
-name: is_supported_by_data
-def: "The relation between a data item and a conclusion where the conclusion is the output of a data interpreting process and the data item is used as an input to that process" []
-property_value: IAO:0000111 "is_supported_by_data" xsd:string
-property_value: IAO:0000112 "The relation between the conclusion \"Gene tpbA is involved in EPS production\" and the data items produced using two sets of organisms, one being a tpbA knockout, the other being tpbA wildtype tested in polysacharide production assays and analyzed using an ANOVA. " xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "OBI" xsd:string
-property_value: IAO:0000119 "OBI" xsd:string
-property_value: IAO:0000119 "Philly 2011 workshop" xsd:string
-domain: OBI:0001909 ! conclusion based on data
-range: IAO:0000027 ! data item
 
 [Typedef]
 id: OBI:0000293
@@ -2591,18 +2252,6 @@ domain: IAO:0000005 ! objective specification
 range: OBI:0000011 ! planned process
 
 [Typedef]
-id: OBI:0001938
-name: has value specification
-def: "A relation between an information content entity and a value specification that specifies its value." []
-property_value: IAO:0000111 "has value specification" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "PERSON: James A. Overton" xsd:string
-property_value: IAO:0000119 "OBI" xsd:string
-domain: IAO:0000030 ! information content entity
-range: OBI:0001933 ! value specification
-is_a: BFO:0000051 ! has part
-
-[Typedef]
 id: RO:0000052
 name: inheres in
 def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
@@ -2674,18 +2323,6 @@ domain: BFO:0000020 ! specifically dependent continuant
 range: BFO:0000031 ! generically dependent continuant
 
 [Typedef]
-id: RO:0000079
-name: function of
-def: "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence" []
-property_value: IAO:0000112 "this catalysis function is a function of this enzyme" xsd:string
-property_value: IAO:0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists." xsd:string
-property_value: IAO:0000118 "function_of" xsd:string
-property_value: IAO:0000118 "is function of" xsd:string
-domain: BFO:0000034 ! function
-is_a: RO:0000052 ! inheres in
-inverse_of: RO:0000085 ! has function
-
-[Typedef]
 id: RO:0000081
 name: role of
 def: "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence" []
@@ -2697,17 +2334,6 @@ is_a: RO:0000052 ! inheres in
 inverse_of: RO:0000087 ! has role
 
 [Typedef]
-id: RO:0000085
-name: has function
-def: "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence" []
-property_value: IAO:0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)" xsd:string
-property_value: IAO:0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists." xsd:string
-property_value: IAO:0000118 "has_function" xsd:string
-domain: BFO:0000004 ! independent continuant
-range: BFO:0000034 ! function
-is_a: RO:0000053 ! bearer of
-
-[Typedef]
 id: RO:0000087
 name: has role
 def: "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence" []
@@ -2717,17 +2343,6 @@ property_value: IAO:0000118 "has_role" xsd:string
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000023 ! role
 is_a: RO:0000053 ! bearer of
-
-[Typedef]
-id: RO:0002180
-name: has component
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: RO:0002350

@@ -1,374 +1,249 @@
 format-version: 1.2
-
-data-version: sddo/releases/2021-12-21/sddo-base.owl
+data-version: sddo/releases/2021-12-29/sddo-base.owl
 ontology: sddo/sddo-base
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Science Data Discovery Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2021-12-21" xsd:string
+property_value: owl:versionInfo "2021-12-29" xsd:string
 
 [Term]
 id: SDDO:0000001
-name: Assay
+name: assay
+def: "An assay is an investigative (analytic) procedure for qualitatively assessing or quantitatively measuring the presence, amount, or functional activity of a target entity." []
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Assay
 
 [Term]
 id: SDDO:0000002
-name: Event
-
-[Term]
-id: SDDO:0000004
-name: DataDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
+name: event
+def: "Something observable that happened at a given time and place" []
+property_value: IAO:0000119 "Adapted from http://purl.obolibrary.org/obo/NCIT_C25499" xsd:string
 
 [Term]
 id: SDDO:0000005
-name: Parameter
-
-[Term]
-id: SDDO:0000006
-name: Specimen
-is_a: SDDO:0000041 ! Feature
+name: data parameter
+def: "A data parameter is any characteristic that can help in understanding data content. That is, a parameter is a data element that is useful, or critical, when identifying  or describing the content of a data object." []
+property_value: IAO:0000112 "another test example" xsd:string
+property_value: IAO:0000112 "The meaning of a column within a spreadsheet (e.g., identifier or height); the meaning of each pixel in an image (e.g., surface temperature)" xsd:string
 
 [Term]
 id: SDDO:0000007
-name: MetadataProduct
-is_a: SDDO:0000085 ! InformationProduct
-
-[Term]
-id: SDDO:0000009
-name: Study
-
-[Term]
-id: SDDO:0000011
-name: OperationDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: metadata product
+is_a: SDDO:0000085 ! information product
+property_value: IAO:0000116 "While agreed that metadata is just data about data and so is really an unneeded term, we recognize that the term metadata is often applied to information about data no matter its form.  In many cases, a metadata product is available for access, even if the data is not.  Thus a Metadata Product Service is any information product or service that returns metadata about science data." xsd:string
 
 [Term]
 id: SDDO:0000012
-name: Platform
+name: platform
+def: "A platform is a physical object to which an instrument is attached or in which it is contained." []
+property_value: IAO:0000112 "A spacecraft, a person, a ship, a piece of laboratory equipment" xsd:string
 
 [Term]
 id: SDDO:0000013
-name: InformationProductService
-is_a: SDDO:0000059 ! ProductService
-property_value: definition "While agreed that the distinction between data and information is becoming increasingly fuzzy, for the purposes of this project information is defined to be any NASA science product or service that returns something other than science data." xsd:string
-
-[Term]
-id: SDDO:0000014
-name: ExperimentDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000015
-name: Increment
-
-[Term]
-id: SDDO:0000016
-name: InstrumentDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: information product or service
+is_a: SDDO:0000059 ! product service
 
 [Term]
 id: SDDO:0000017
-name: DataProduct
-is_a: SDDO:0000072 ! DataProductService
-
-[Term]
-id: SDDO:0000019
-name: ModelDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-property_value: definition "For the purposes of the SMD project, anything that you can obtain or use from any of the SMD divisions is a product or service." xsd:string
+name: data product
+is_a: SDDO:0000072 ! data product or service
 
 [Term]
 id: SDDO:0000020
-name: Instrument
-
-[Term]
-id: SDDO:0000023
-name: Software
+name: instrument
+def: "An instrument is a physical object that can be used to collect data." []
+property_value: IAO:0000112 "A camera, MODIS, a survey instrument (e.g., google form)" xsd:string
+property_value: IAO:0000119 "Adapted from pds:Instrument" xsd:string
 
 [Term]
 id: SDDO:0000025
-name: Person
+name: person
 
 [Term]
 id: SDDO:0000027
-name: Experiment
-
-[Term]
-id: SDDO:0000028
-name: PlatformDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000030
-name: InstrumentOperatingModeDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: experiment
+def: "A plan for a coordinated set of actions and observations designed to generate data, with the ultimate goal of discovery or hypothesis testing." []
+property_value: IAO:0000116 "Added the phrase \"plan for a\" to the front of the definition per Dan's request" xsd:string
+property_value: IAO:0000119 "adapted from http://purl.obolibrary.org/obo/NCIT_C42790" xsd:string
 
 [Term]
 id: SDDO:0000032
-name: LaboratoryProcedure
-
-[Term]
-id: SDDO:0000034
-name: InstrumentOperatingMode
-
-[Term]
-id: SDDO:0000035
-name: Measurement
+name: laboratory procedure
+def: "Any procedure that involves testing or manipulating a sample or subject in a laboratory setting" []
+property_value: IAO:0000119 "A broadened version of http://purl.obolibrary.org/obo/NCIT_C25294" xsd:string
 
 [Term]
 id: SDDO:0000038
-name: AccessInterface
+name: access interface
 
 [Term]
 id: SDDO:0000041
-name: Feature
-
-[Term]
-id: SDDO:0000044
-name: EngineeringPlatform
-is_a: SDDO:0000012 ! Platform
+name: feature
 
 [Term]
 id: SDDO:0000051
-name: Organization
-
-[Term]
-id: SDDO:0000052
-name: LivingSubject
+name: organization
 
 [Term]
 id: SDDO:0000056
-name: Deployment
+name: deployment
 
 [Term]
 id: SDDO:0000059
-name: ProductService
+name: product service
 property_value: http://purl.org/dc/elements/1.1/date 2020-11-18T00:00:00 xsd:string
-property_value: http://purl.org/dc/elements/1.1/description "For the purposes of the SMD project, anything that you can obtain or use from any of the SMD divisions is a product or service" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Anything that you can obtain or use from any of NASA's SMD divisions is a product or service" xsd:string
 created_by: Peter Fox
 
 [Term]
 id: SDDO:0000061
-name: DiscoveryInterface
+name: discovery interface
 
 [Term]
 id: SDDO:0000062
-name: Mission
-
-[Term]
-id: SDDO:0000065
-name: Hurricane
-is_a: SDDO:0000041 ! Feature
-
-[Term]
-id: SDDO:0000068
-name: Factor
-
-[Term]
-id: SDDO:0000069
-name: SelectionParameter
-
-[Term]
-id: SDDO:0000070
-name: InformationSelectionParameter
-is_a: SDDO:0000069 ! SelectionParameter
+name: mission
+def: "A mission is a named activity for some purpose" []
+property_value: IAO:0000119 "Discussion by SDDO project team" xsd:string
 
 [Term]
 id: SDDO:0000071
-name: Program
+name: program
 
 [Term]
 id: SDDO:0000072
-name: DataProductService
-is_a: SDDO:0000059 ! ProductService
+name: data product or service
+is_a: SDDO:0000059 ! product service
+property_value: IAO:0000116 "It is generally agreed that data is in the eye of the beholder; but, for the purposes of this project the terms data and data product are limited to traditional mostly numeric science data products that NASA holds and actually calls data, data sets or data products. Thus a DataProductService is any product or service that returns bulk science data." xsd:string
 
 [Term]
 id: SDDO:0000074
-name: Observation
-
-[Term]
-id: SDDO:0000075
-name: HealthSafetyEquipment
-
-[Term]
-id: SDDO:0000076
-name: Hardware
-
-[Term]
-id: SDDO:0000081
-name: Sample
+name: observation
 
 [Term]
 id: SDDO:0000082
-name: Campaign
-
-[Term]
-id: SDDO:0000083
-name: ImageLandmark
-is_a: SDDO:0000041 ! Feature
+name: campaign
 
 [Term]
 id: SDDO:0000085
-name: InformationProduct
-is_a: SDDO:0000013 ! InformationProductService
-
-[Term]
-id: SDDO:0000086
-name: MissionDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: information product
+is_a: SDDO:0000013 ! information product or service
 
 [Term]
 id: SDDO:0000088
-name: ResearchInvestigation
-
-[Term]
-id: SDDO:0000089
-name: DataSelectionParameter
-is_a: SDDO:0000069 ! SelectionParameter
-
-[Term]
-id: SDDO:0000091
-name: ApplicationDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-
-[Term]
-id: SDDO:0000092
-name: DataProductDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000094
-name: Repository
-
-[Term]
-id: SDDO:0000096
-name: Organism
-is_a: SDDO:0000041 ! Feature
-
-[Term]
-id: SDDO:0000101
-name: IncidenceAngleRange
-
-[Term]
-id: SDDO:0000103
-name: Provider
-
-[Term]
-id: SDDO:0000105
-name: SpaceTimeBoundingDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-
-[Term]
-id: SDDO:0000108
-name: SciencePlatform
-is_a: SDDO:0000012 ! Platform
-
-[Term]
-id: SDDO:0000109
-name: InformationDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-
-[Term]
-id: SDDO:0000111
-name: LocationDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: research investigation
 
 [Term]
 id: SDDO:0000118
-name: MutableNecessaryEvil
+name: mutable necessary evil
 
 [Term]
 id: SDDO:0000119
-name: ResearchMission
-is_a: SDDO:0000062 ! Mission
-
-[Term]
-id: SDDO:0000127
-name: SampleDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
+name: research mission
+def: "A mission that gather scientific data" []
+is_a: SDDO:0000062 ! mission
 
 [Term]
 id: SDDO:0000129
-name: Project
+name: project
 
 [Term]
 id: SDDO:0000130
-name: EngineeringMission
-is_a: SDDO:0000062 ! Mission
+name: engineering mission
+is_a: SDDO:0000062 ! mission
 
 [Term]
 id: SDDO:0000134
-name: NASAMission
-is_a: SDDO:0000062 ! Mission
-
-[Term]
-id: SDDO:0000136
-name: IncidenceAngle
+name: NASA mission
+def: "A NASA mission is a mission led or funded by NASA" []
+is_a: SDDO:0000062 ! mission
+property_value: IAO:0000116 "Per the NASA SMD glossary at https://science.nasa.gov/glossary/ a mission is a \"NASA Science-funded activity with the purpose of meeting goals laid out by presidential directive, and detailed in Science Mission Directorate's strategic plan.\"  This would mean the ontology would need to include the concepts of a presidential directive and a strategic plan - wait for a use case before implementing this change." xsd:string
+property_value: IAO:0000119 "SDDO team" xsd:string
 
 [Term]
 id: SDDO:0000142
-name: Phenomenon
+name: phenomenon
 
 [Term]
 id: SDDO:0000147
-name: ResearchStudy
+name: research study
 
 [Term]
 id: SDDO:0100000
-name: ExperimentApparatus
+name: experiment apparatus
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:30:12Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
-id: SDDO:0100001
-name: DiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:32:52Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
-
-[Term]
-id: SDDO:0100002
-name: ToolDiscoveryCriterion
-is_a: SDDO:0100001 ! DiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:33:53Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
-
-[Term]
 id: SDDO:0100003
-name: Facility
+name: facility
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:36:31Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
 id: SDDO:0100005
-name: Author
+name: author
 property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:38:19Z xsd:dateTime
 created_by: http://orcid.org/0000-0003-4808-4736
 
 [Term]
-id: SDDO:0100006
-name: Investigator
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:38:29Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000001
+name: investigator
+created_by: Rduerr
+creation_date: 2021-11-30T19:43:39.350414Z
 
 [Term]
-id: SDDO:0100007
-name: PhotoGallery
-is_a: SDDO:0000085 ! InformationProduct
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:39:19Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000002
+name: organism
+created_by: Rduerr
+creation_date: 2021-11-30T21:34:56.970241Z
 
 [Term]
-id: SDDO:0100008
-name: Document
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:39:33Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000003
+name: specimen
+created_by: Rduerr
+creation_date: 2021-11-30T21:35:20.533927Z
 
 [Term]
-id: SDDO:0100009
-name: ObjectDiscoveryCriterion
-is_a: SDDO:0000004 ! DataDiscoveryCriterion
-property_value: http://purl.org/dc/elements/1.1/date 2021-10-26T23:41:00Z xsd:dateTime
-created_by: http://orcid.org/0000-0003-4808-4736
+id: SDDO:10000004
+name: study
+def: "A data product service in the GeneLab repository" []
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-01T20:52:05.98268Z
+
+[Term]
+id: SDDO:1000001
+name: spase:NumericalData
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:57:22.551595Z
+
+[Term]
+id: SDDO:1000002
+name: spase:Catalog
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:58:11.536811Z
+
+[Term]
+id: SDDO:1000003
+name: spase:DisplayData
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-02T22:58:56.536404Z
+
+[Term]
+id: SDDO:1000004
+name: pds:Data_Set_PDS3
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-10T20:53:48.676522Z
+
+[Term]
+id: SDDO:1000005
+name: pds:Collection
+def: "A PDS 4 collection where the collection_type is \"Data\"" []
+is_a: SDDO:0000072 ! data product or service
+created_by: Rduerr
+creation_date: 2021-12-10T20:55:07.211503Z
 
