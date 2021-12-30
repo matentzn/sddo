@@ -9,3 +9,4 @@ http://www.w3.org/ns/sosa/Sample		class		OBI:0100051
 http://www.w3.org/ns/sosa/Sampler		class	http://purl.obolibrary.org/obo/OBI_0000968	
 http://www.w3.org/ns/sosa/Sampling		class	http://www.w3.org/ns/sosa/Procedure	
 http://www.w3.org/ns/sosa/Sensor		class	BFO:0000040	
+http://purl.obolibrary.org/obo/OBI_0000832			http://purl.obolibrary.org/obo/SDDO_0000020	
